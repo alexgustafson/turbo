@@ -63,23 +63,16 @@ module.exports = function (grunt) {
             }
         },
         wiredep: {
-
-            task: {
-
-                // Point to the files that should be updated when
-                // you run `grunt wiredep`
-                src: [
-                    'src/jade/**/*.jade',   // .jade support...
-                    'src/sass/main.scss',  // .scss & .sass support...
-                    'src/config.yml'         // and .yml & .yaml support out of the box!
-                ],
-
-                options: {
-                    // See wiredep's configuration documentation for the options
-                    // you may pass:
-
-                    // https://github.com/taptapship/wiredep#configuration
-                }
+           taskA: {
+              src: [
+                'src/jade/partials/*.jade',
+              ],
+              ignorePath: '../../'
+            },
+            taskB: {
+              src: [
+                'src/sass/*.scss'
+              ]
             }
         }
     });
@@ -91,6 +84,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-wiredep');
     // Default task(s).
-    grunt.registerTask('default', ['uglify', 'jade', 'sass', 'watch']);
+    grunt.registerTask('default', ['uglify', 'wiredep', 'jade', 'sass', 'watch']);
 
 };

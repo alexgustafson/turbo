@@ -1,21 +1,11 @@
-{% if cookiecutter.with_susy == 'yes' %}
-@import "../bower_components/susy/sass/susy";
-{% endif %}
-{% if cookiecutter.with_breakpoint_sass == 'yes' %}
-@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
-{% endif %}
-{% if cookiecutter.with_compass_mixins == 'yes' %}
-@import "../bower_components/compass-mixins/lib/compass";
-{% endif %}
-{% if cookiecutter.with_bourbon == 'yes' %}
-@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
-@import "../bower_components/bitters/app/assets/stylesheets/base";
-{% endif %}
-{% if cookiecutter.with_foundation == 'yes' %}
- @import "../bower_components/foundation/css/foundation.min.css";
-{% endif %}
- @import "../bower_components/normalize.css/normalize.css";
+// bower:css
+// endbower
 
+// bower:sass
+// endbower
+
+// bower:scss
+// endbower
 
 @import "settings";
 

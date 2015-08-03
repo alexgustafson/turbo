@@ -1,16 +1,8 @@
 
 block bottom_js
-{% if cookiecutter.with_foundation == 'yes' %}
-    script(src='bower_components/foundation/js/foundation.min.js' type="text/javascript")
-{% endif %}
-{% if cookiecutter.with_jquery == 'yes' %}
-    script(src='bower_components/jquery/dist/jquery.min.js' type="text/javascript")
-{% endif %}
-{% if cookiecutter.with_angular == 'yes' %}
-    script(src='bower_components/angular/angular.min.js' type="text/javascript")
-{% endif %}
-    | <!-- bower:js -->
-    | <!-- endbower -->
+    // bower:js
+    // endbower
+
     script(src='js/main.js')
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.

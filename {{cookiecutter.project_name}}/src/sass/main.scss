@@ -1,13 +1,13 @@
 {% if cookiecutter.with_susy == 'yes' %}
 @import "../bower_components/susy/sass/susy";
 {% endif %}
-{% if cookiecutter.with_breakpoint-sass == 'yes' %}
+{% if cookiecutter.with_breakpoint_sass == 'yes' %}
 @import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
 {% endif %}
 {% if cookiecutter.with_modernizer == 'yes' %}
     "modernizer": "~2.8.2",
 {% endif %}
-{% if cookiecutter.with_compass-mixins == 'yes' %}
+{% if cookiecutter.with_compass_mixins == 'yes' %}
 @import "../bower_components/compass-mixins/lib/compass";
 {% endif %}
 {% if cookiecutter.with_bourbon == 'yes' %}

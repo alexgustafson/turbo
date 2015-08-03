@@ -26,13 +26,13 @@
 {% if cookiecutter.with_susy == 'yes' %}
     "susy": "~2.2.5",
 {% endif %}
-{% if cookiecutter.with_breakpoint-sass == 'yes' %}
+{% if cookiecutter.with_breakpoint_sass == 'yes' %}
     "breakpoint-sass": "~2.6.1",
 {% endif %}
 {% if cookiecutter.with_modernizer == 'yes' %}
     "modernizer": "~2.8.2",
 {% endif %}
-{% if cookiecutter.with_compass-mixins == 'yes' %}
+{% if cookiecutter.with_compass_mixins == 'yes' %}
     "compass-mixins": "~1.0.2",
 {% endif %}
 {% if cookiecutter.with_bourbon == 'yes' %}

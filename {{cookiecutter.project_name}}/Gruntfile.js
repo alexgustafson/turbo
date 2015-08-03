@@ -30,10 +30,11 @@ module.exports = function(grunt) {
         options: {
             sourceMap: true
         },
-        dist: {
-            files: {
-                'dist/css/*.css': 'src/sass/*.scss'
-            }
+        compile: {
+          cwd: 'sass',
+          src: ['src/sass/*.scss'],
+          dest: 'dest/css/',
+          ext: '.css'
         }
     },
     watch: {

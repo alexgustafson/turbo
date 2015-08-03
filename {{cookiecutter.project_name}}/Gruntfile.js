@@ -17,12 +17,12 @@ module.exports = function(grunt) {
         options: {
           pretty: true,
           data: {
-            debug: false,
+            debug: true
 
           }
         },
         files: {
-          "dist/": ["src/*.jade"]
+          "dist/index.html": ["src/index.jade"]
         }
       }
     },
@@ -41,16 +41,16 @@ module.exports = function(grunt) {
         files: ['**/*.scss'],
         tasks: ['default'],
         options: {
-          spawn: false,
-        },
-      },
-    },
+          spawn: false
+        }
+      }
+    }
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-jade');
+  grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).

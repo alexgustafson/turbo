@@ -25,14 +25,35 @@ module.exports = function(grunt) {
           "dist/": ["src/*.jade"]
         }
       }
-    }
+    },
+    sass: {
+        options: {
+            sourceMap: true
+        },
+        dist: {
+            files: {
+                'dist/css': 'src/sass/*.scss'
+            }
+        }
+    },
+    watch: {
+      scripts: {
+        files: ['**/*.scss'],
+        tasks: ['default'],
+        options: {
+          spawn: false,
+        },
+      },
+    },
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-jade');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify', 'jade']);
+  grunt.registerTask('default', ['uglify', 'jade', 'sass']);
 
 };

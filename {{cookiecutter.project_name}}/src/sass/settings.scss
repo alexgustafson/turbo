@@ -1,0 +1,17 @@
+$header-background : #abbbbc;
+$body-background : #f9fdff;
+$footer-background : #a9a9a9;
+$font-color : #525252;
+
+$global-inner-padding : 10px;
+
+.global-inner-pdding {
+  padding: $global-inner-padding;
+}
+
+.footer, .header {
+  h1, h2, h3, h4 {
+    padding: 0;
+    margin: 0;
+  }
+}

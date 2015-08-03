@@ -1,0 +1,16 @@
+{
+    "project_name": "project_name",
+
+    "author_name": "Your Name",
+    "email": "Your email",
+    "description": "A short description of the project.",
+    "year": "Current year",
+    "with_susy": "yes",
+    "with_breakpoint-sass": "yes",
+    "with_modernizer": "yes",
+    "with_compass-mixins": "yes",
+    "with_bourbon": "no",
+    "with_foundation": "no",
+    "with_jquery": "yes",
+    "with_angular": "no"
+}

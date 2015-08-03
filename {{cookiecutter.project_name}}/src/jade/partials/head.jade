@@ -1,0 +1,13 @@
+meta(charset='utf-8')
+meta(http-equiv='x-ua-compatible', content='ie=edge')
+title
+meta(name='description', content='')
+meta(name='viewport', content='width=device-width, initial-scale=1')
+link(rel='apple-touch-icon', href='apple-touch-icon.png')
+// Place favicon.ico in the root directory
+block css
+  link(rel='stylesheet', href='css/main.css')
+block top_js
+{% if cookiecutter.with_modernizer == 'yes' }
+  script(src='bower_components/modernizer/modernizr.js')
+{% endif %}

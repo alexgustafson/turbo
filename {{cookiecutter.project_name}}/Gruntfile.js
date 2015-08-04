@@ -48,21 +48,21 @@ module.exports = function (grunt) {
         },
         // Grunt-contrib-watch
         watch: {
-            sass: {
+            watch_wiredep: {
+                files: ['bower.json'],
+                tasks: ['wiredep', 'sass', 'jade']
+            },
+            watch_sass: {
                 // Watches all Sass or Scss files within the scss folder and one level down.
                 // If you want to watch all scss files instead, use the "**/*" globbing pattern
                 files: ['src/sass/{,*/}*.{scss,sass}'],
                 // runs the task `sass` whenever any watched file changes
                 tasks: ['sass']
             },
-            jade: {
-                files: ['src/{,*/}*.jade'],
+            watch_jade: {
+                files: ['src/jade/*.jade'],
                 // runs the task `sass` whenever any watched file changes
                 tasks: ['jade']
-            },
-            wiredep: {
-                files: ['bower.json'],
-                tasks: ['wiredep']
             },
             options: {
                 // Sets livereload to true for livereload to work
@@ -72,13 +72,13 @@ module.exports = function (grunt) {
             }
         },
         wiredep: {
-           taskA: {
+           jadefiles: {
               src: [
-                'src/jade/partials/*.jade',
+                'src/jade/{,*/}*.jade',
               ],
               ignorePath: '../../'
             },
-            taskB: {
+            scssfiles: {
               src: [
                 'src/sass/*.scss'
               ]

@@ -16,7 +16,7 @@ os.system("bower install breakpoint-sass --save")
 {% endif %}
 
 {% if cookiecutter.with_modernizer == 'yes' %}
-    "modernizer": "~2.8.2",
+os.system("bower install modernizer --save")
 {% endif %}
 
 {% if cookiecutter.with_compass_mixins == 'yes' %}

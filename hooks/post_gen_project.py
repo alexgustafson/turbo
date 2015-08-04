@@ -42,4 +42,4 @@ os.system("bower install angular --save")
 {% endif %}
 
 
-os.system("grunt serve")
+os.system("grunt")

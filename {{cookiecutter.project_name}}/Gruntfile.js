@@ -469,7 +469,7 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'copy:dist',
-    'modernizr',
+    //'modernizr',
     'filerev',
     'usemin',
     'htmlmin'
@@ -477,7 +477,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'newer:eslint',
-    'test',
+    //'test',
     'build'
   ]);
 };

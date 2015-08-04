@@ -1,54 +1,22 @@
 {
   "name": "{{ cookiecutter.project_name }}",
+  "private": true,
   "version": "0.0.1",
   "authors": [
     "{{ cookiecutter.author_name }} <{{ cookiecutter.email }}>"
   ],
   "description": "{{ cookiecutter.description }}",
-  "main": "src/index.html",
-  "keywords": [
-    "sass",
-    "susy",
-    "bower",
-    "libsass",
-    "jade"
-  ],
+  "main": "app/index.html",
   "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "src/bower_components",
+    "app/bower_components",
     "test",
     "tests"
   ],
   "dependencies": {
-{% if cookiecutter.with_susy == 'yes' %}
-    "susy": "~2.2.5",
-{% endif %}
-{% if cookiecutter.with_breakpoint_sass == 'yes' %}
-    "breakpoint-sass": "~2.6.1",
-{% endif %}
-{% if cookiecutter.with_modernizer == 'yes' %}
-    "modernizer": "~2.8.2",
-{% endif %}
-{% if cookiecutter.with_compass_mixins == 'yes' %}
-    "compass-mixins": "~1.0.2",
-{% endif %}
-{% if cookiecutter.with_bourbon == 'yes' %}
-    "bourbon": "~4.2.3",
-    "neat": "~1.7.2",
-    "bitters": "~1.0.0",
-{% endif %}
-{% if cookiecutter.with_foundation == 'yes' %}
-    "foundation": "~5.5.2",
-{% endif %}
-{% if cookiecutter.with_jquery == 'yes' %}
-    "jquery": "~2.1.4",
-{% endif %}
-{% if cookiecutter.with_angular == 'yes' %}
-    "angular": "~1.4.3",
-{% endif %}
     "normalize.css": "~3.0.3"
   }
 }

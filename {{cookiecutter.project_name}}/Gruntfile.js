@@ -55,6 +55,15 @@ module.exports = function (grunt) {
                 // runs the task `sass` whenever any watched file changes
                 tasks: ['sass']
             },
+            jade: {
+                files: ['src/{,*/}*.jade'],
+                // runs the task `sass` whenever any watched file changes
+                tasks: ['jade']
+            },
+            wiredep: {
+                files: ['bower.json'],
+                tasks: ['wiredep']
+            },
             options: {
                 // Sets livereload to true for livereload to work
                 // (livereload is not covered in this article)

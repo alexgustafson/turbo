@@ -1,12 +1,11 @@
 {
-  "name": "prototype",
+  "name": "{{ cookiecutter.project_name }}",
   "description": "",
   "main": "index.js",
   "authors": [
-    "alexgustafson <alex_gustafson@yahoo.de>"
+    "{{ cookiecutter.author_name }} <{{ cookiecutter.email }}>"
   ],
-  "license": "ISC",
-  "homepage": "https://github.com/alexgustafson/prototype",
+  "license": "MIT",
   "moduleType": [],
   "private": true,
   "ignore": [

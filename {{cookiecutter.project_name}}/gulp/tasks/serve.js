@@ -3,13 +3,15 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('serve', ['build', 'watch'], function() {
 
-    // Serve files from the root of this project
-    browserSync.init({
-        server: {
-            baseDir: "./dist/"
-        },
-        injectChanges: true
-    });
+    browserSync({
+        online: false,            // online connectivity required?
+        host: '127.0.0.1',
+        port: 9000,               // different than django port
+        proxy: "127.0.0.1:8000",  // default django server url + port
+        startPath: "/prototype/", // open specific page
+        open: '127.0.0.1'         // start the browser
+    }, done);
 
-    gulp.watch("dist/**/*", ['']).on('change', browserSync.reload);
+    gulp.watch("templates/**/*", ['']).on('change', browserSync.reload);
+    gulp.watch("static/**/*", ['']).on('change', browserSync.reload);
 })

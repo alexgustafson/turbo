@@ -1,7 +1,7 @@
 var path = require('path');
 
 var appRoot = 'src/';
-var outputRoot = '';
+var outputRoot = 'dist/';
 
 module.exports = {
 
@@ -18,7 +18,7 @@ module.exports = {
     //scripts_output: outputRoot + 'scripts/',
 
     //wiredep stuff
-    bowerDirectory: "bower_components",
+    bowerDirectory: "static/{{ cookiecutter.project_name }}/vendor/",
     bowerJson: 'bower.json',
     wiredep_jade_output: appRoot + 'jade/',
     wiredep_scss_output: appRoot + 'scss/',
@@ -33,10 +33,12 @@ module.exports = {
      whatever name your django module is called, for example:
      '../static/Qblog/'
      */
-    jade_dest: outputRoot + 'templates/prototype/',
-    dest: outputRoot + 'static/prototype/',
-    assets_dest: outputRoot + 'static/prototype/assets/',
-    scripts_output: outputRoot + 'static/prototype/scripts/',
-    styleOutput: outputRoot + 'static/prototype/style/',
+
+    jade_dest: 'templates/{{ cookiecutter.project_name }}/',
+    dest: 'static/{{ cookiecutter.project_name }}/',
+    assets_dest: 'static/{{ cookiecutter.project_name }}/assets/',
+    scripts_output: 'static/{{ cookiecutter.project_name }}/scripts/',
+    styleOutput: 'static/{{ cookiecutter.project_name }}/style/',
+
 
 };

@@ -1,7 +1,7 @@
 {
-  "name": "prototype-doc",
+  "name": "{{ cookiecutter.project_name }}-doc",
   "version": "1.0.0",
-  "description": "documentation of prototype tutorial",
+  "description": "documentation of {{ cookiecutter.project_name }}",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -8,7 +8,7 @@ gulp.task('serve', ['build', 'watch'], function() {
         host: '127.0.0.1',
         port: 9000,               // different than django port
         proxy: "127.0.0.1:8000",  // default django server url + port
-        startPath: "/prototype/", // open specific page
+        startPath: "/{{ cookiecutter.project_name }}/", // open specific page
         open: '127.0.0.1'         // start the browser
     }, done);
 

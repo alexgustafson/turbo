@@ -38,9 +38,9 @@ First let's install the requirements.
     save it as a dependency in the package.json file.
 
     Press ^C at any time to quit.
-    name: (doc) prototype-doc
+    name: (doc) {{ cookiecutter.project_name }}-doc
     version: (1.0.0)
-    description: documentation of prototype tutorial
+    description: documentation of {{ cookiecutter.project_name }} 
     entry point: (index.js)
     test command:
     git repository:
@@ -50,9 +50,9 @@ First let's install the requirements.
     About to write to path/path/path/doc/package.json:
 
     {
-      "name": "prototype-doc",
+      "name": "{{ cookiecutter.project_name }}-doc",
       "version": "1.0.0",
-      "description": "documentation of prototype tutorial",
+      "description": "documentation of {{ cookiecutter.project_name }}",
       "main": "index.js",
       "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"

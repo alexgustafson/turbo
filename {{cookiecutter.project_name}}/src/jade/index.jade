@@ -6,10 +6,11 @@ html(lang="en")
       if (foo) {
         bar(1 + 5)
       }
-    // build:css {{ STATIC_URL }}prototype/style/main.css
-    link(rel="stylesheet" href="{{STATIC_URL}}style/main.css")
+
+    // build:css {{ STATIC_URL }}{{cookiecutter.project_name}}/style/main.css
     // bower:css
     // endbower
+    link(rel="stylesheet" href="{{STATIC_URL}}{{cookiecutter.project_name}}style/main.css")
     // endbuild
 
   body
@@ -20,10 +21,10 @@ html(lang="en")
         templating language with a
         strong focus on performance
         and powerful features..
-    // build:js {{ STATIC_URL }}prototype/scripts/main.js
-    script(src='/static/prototype/scripts/main.js')
 
+    // build:js {{ STATIC_URL }}{{cookiecutter.project_name}}/scripts/main.js
     // bower:js
     // endbower
+    script(src='{{ STATIC_URL }}{{cookiecutter.project_name}}/scripts/main.js')
     // endbuild
 

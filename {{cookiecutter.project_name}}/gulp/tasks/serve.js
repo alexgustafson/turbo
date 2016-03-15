@@ -3,7 +3,7 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('serve', ['build', 'watch'], function() {
 
-    browserSync({
+    browserSync.init({
         online: false,            // online connectivity required?
         host: '127.0.0.1',
         port: 9000,               // different than django port

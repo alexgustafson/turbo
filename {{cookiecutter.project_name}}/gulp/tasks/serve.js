@@ -10,7 +10,7 @@ gulp.task('serve', ['build', 'watch'], function() {
         proxy: "127.0.0.1:8000",  // default django server url + port
         startPath: "/{{ cookiecutter.project_name }}/", // open specific page
         open: '127.0.0.1'         // start the browser
-    }, done);
+    });
 
     gulp.watch("templates/**/*", ['']).on('change', browserSync.reload);
     gulp.watch("static/**/*", ['']).on('change', browserSync.reload);

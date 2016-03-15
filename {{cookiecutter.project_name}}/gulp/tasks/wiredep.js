@@ -3,7 +3,30 @@ var gulp = require('gulp');
 var wiredep = require('wiredep').stream;
 
 var overrides = {
-    // non standard package paths can be fixed here
+    "fancybox": {
+      "main": ["source/jquery.fancybox.css", "source/jquery.fancybox.js"]
+    },
+    "isotope": {
+      "main": ["dist/isotope.pkgd.min.js"]
+    },
+    "masonry": {
+      "main": ["dist/masonry.pkgd.min.js"]
+    },
+    "outlayer": {
+      "main": [
+        "item.js",
+        "outlayer.js"
+      ]
+    },
+    "foundation-datepicker": {
+      "main": ["css/foundation-datepicker.scss", "js/foundation-datepicker.min.js"]
+    },
+    "motion-ui": {
+      "main": ["src/motion-ui.scss", "dist/motion-ui.min.js"]
+    },
+    "semantic": {
+      "main": ["dist/semantic.css", "dist/sematic.min.js"]
+    }
 }
 
 

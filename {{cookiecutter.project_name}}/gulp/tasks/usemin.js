@@ -8,11 +8,11 @@ var paths = require('../paths')
 
 
 gulp.task('usemin', function() {
-    gulp.src(paths.jade_dest + '**/*.html')
+    gulp.src(paths.dest + '**/*.html')
         .pipe(usemin({
             css: [minifyCss(), 'concat', rev()],
             //html: [minifyHtml({empty: true})],
             js: [uglify(), rev()]
         }))
-        .pipe(gulp.dest(paths.jade_dest));
+        .pipe(gulp.dest(paths.dest));
 });

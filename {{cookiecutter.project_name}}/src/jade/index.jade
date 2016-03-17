@@ -1,16 +1,7 @@
 doctype html
 html(lang="en")
   head
-    title= pageTitle
-    script(type='text/javascript').
-      if (foo) {
-        bar(1 + 5)
-      }
-
-    // build:css /style/main.css
-    // bower:css
-    // endbower
-    // endbuild
+    include partials/_head
 
   body
     h1 Jade - node template engine
@@ -21,8 +12,5 @@ html(lang="en")
         strong focus on performance
         and powerful features..
 
-    // build:js /scripts/main.js
-    // bower:js
-    // endbower
-    // endbuild
+    include partials/_scripts
 

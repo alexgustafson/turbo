@@ -1,0 +1,43 @@
+.header {
+  background-color: #2e292d;
+  color: white;
+  padding: 1em;
+  vertical-align: bottom;
+
+  ul, li {
+    display: inline-block;
+  }
+
+  .logo {
+    padding: 0;
+    img {
+      width: 220px;
+    }
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+
+  .nav {
+    float: left;
+    display: inline-block;
+    li {
+      padding-right: 1em;
+      color: #b8b8b8;
+      &.selected {
+        color: white;
+      }
+    }
+  }
+
+  .lang {
+    display: inline-block;
+    float: right;
+
+    li {
+      color: #cecece;
+      .active {
+        color: white;
+      }
+    }
+  }
+}

@@ -34,11 +34,10 @@ module.exports = {
      '../static/Qblog/'
      */
 
-    jade_dest: 'templates/{{ cookiecutter.project_name }}/',
+    jade_dest: 'templates/',
     dest: 'static/{{ cookiecutter.project_name }}/',
     assets_dest: 'static/{{ cookiecutter.project_name }}/assets/',
     scripts_output: 'static/{{ cookiecutter.project_name }}/scripts/',
     styleOutput: 'static/{{ cookiecutter.project_name }}/style/',
-
-
+    
 };

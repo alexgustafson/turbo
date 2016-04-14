@@ -1,0 +1,22 @@
+include ../mixins/_components
+
+| {% load cms_tags sekizai_tags menu_tags i18n compress %}
+
+doctype html
+html(lang="{{ LANGUAGE_CODE }}")
+  head
+    include  ../partials/_head
+
+  body
+    | {% cms_toolbar %}
+
+    include ../partials/_header
+
+    | {% block content %}
+    | {% endblock  %}
+
+
+    footer
+
+    include ../partials/_scripts
+

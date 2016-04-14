@@ -1,0 +1,15 @@
+.header.clearfix
+  .container
+
+    .logo
+      a(href="/")
+        img(src="{{ STATIC_URL }}frontend/assets/images/logo.png")
+
+    .nav
+      ul
+        | {% show_menu 0 1 1 100 "partials/main_menu.html" %}
+
+    .lang
+      | {% language_chooser 'partials/language_chooser.html' %}
+
+

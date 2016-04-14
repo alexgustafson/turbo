@@ -1,0 +1,15 @@
+meta(charset="utf-8")
+meta(http-equiv="x-ua-compatible" content="ie=edge")
+meta(name="viewport" content="width=device-width,initial-scale=1")
+title
+  | Title
+
+| {% compress css %}
+// build:css {{ STATIC_URL }}frontend/style/main.css
+// bower:css
+link(rel='stylesheet', href='/../static/frontend/vendor/normalize-css/normalize.css')
+// endbower
+link(rel="stylesheet" href="{{STATIC_URL}}frontend/style/main.css")
+// endbuild
+| {% endcompress %}
+| {% render_block "css" %}

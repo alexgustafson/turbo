@@ -15,5 +15,9 @@
     "test",
     "tests"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "susy": "^2.2.12",
+    "breakpoint-sass": "^2.7.0",
+    "normalize-css": "^4.1.1"
+  }
 }

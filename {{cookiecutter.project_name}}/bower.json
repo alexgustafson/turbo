@@ -18,6 +18,7 @@
   "dependencies": {
     "susy": "^2.2.12",
     "breakpoint-sass": "^2.7.0",
-    "normalize-css": "^4.1.1"
+    "normalize-css": "^4.1.1",
+    "open-iconic": "^1.1.1"
   }
 }

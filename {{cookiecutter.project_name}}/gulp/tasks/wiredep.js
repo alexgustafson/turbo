@@ -26,6 +26,9 @@ var overrides = {
     },
     "semantic": {
       "main": ["dist/semantic.css", "dist/sematic.min.js"]
+    },
+    "open-iconic": {
+      "main": ["font/css/open-iconic.scss"]
     }
 }
 

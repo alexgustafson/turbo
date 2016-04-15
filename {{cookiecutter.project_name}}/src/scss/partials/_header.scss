@@ -1,11 +1,20 @@
 .header {
-  background-color: #2e292d;
+  background-color: $header-background;
   color: white;
-  padding: 1em;
   vertical-align: bottom;
+
+  .border-line {
+    background-color: $header-border-bottom;
+    height: 1px;
+  }
 
   ul, li {
     display: inline-block;
+
+    a {
+      display: inline-block;
+      padding: 0.6em;
+    }
   }
 
   .logo {
@@ -17,14 +26,60 @@
     padding-top: 1em;
   }
 
-  .nav {
+  .mobile-menu {
+    padding-left: 0.6em;
+  }
+
+  .nav, .mobile-menu {
     float: left;
     display: inline-block;
+    margin-left: -0.6em;
     li {
-      padding-right: 1em;
-      color: #b8b8b8;
+      color: $menu-font-color;
+
       &.selected {
-        color: white;
+        color: $menu-font-color-active;
+      }
+      &.ancestor {
+        color: $menu-font-color-ancestor;
+      }
+      &:hover {
+        color: $menu-font-color-hover;
+      }
+
+      a {
+        display: inline-block;
+        padding: 0.6em;
+      }
+
+      ul.child {
+        background-color: $header-background;
+        border: 1px solid $header-border-bottom;
+        border-top: none;
+      }
+    }
+
+    ul {
+      @include breakpoint($small-range) {
+        display: none;
+      }
+      @include breakpoint($small-range-max) {
+        display: block;
+      }
+    }
+
+    .dropdown-top {
+      position: relative;
+
+      &:hover {
+        .dropdown-child {
+          display: block;
+        }
+      }
+
+      .dropdown-child {
+        display: none;
+        position: absolute;
       }
     }
   }
@@ -33,11 +88,56 @@
     display: inline-block;
     float: right;
 
+    ul, li {
+      display: inline;
+    }
+
     li {
-      color: #cecece;
+      float: left;
+      color: $menu-font-color;
       .active {
-        color: white;
+        color: $menu-font-color-active;
+      }
+      &:hover {
+        color: $menu-font-color-hover;
+      }
+
+      a {
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+
+      }
+    }
+  }
+
+  .mobile-menu {
+    ul {
+      @include breakpoint($small-range) {
+        display: block;
+      }
+      @include breakpoint($small-range-max) {
+        display: none;
+      }
+
+      a {
+        color: $menu-font-color-active;
       }
     }
   }
 }
+
+.breadcrumb {
+  color: $menu-font-color;
+  padding-top: 2.6em;
+  padding-bottom: 2.6em;
+  font-size: 0.8em;
+
+  li {
+    display: inline-block;
+
+    &:hover {
+      color: $menu-font-color-hover;
+    }
+  }
+}
+

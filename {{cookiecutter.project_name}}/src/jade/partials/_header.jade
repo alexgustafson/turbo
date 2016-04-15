@@ -9,7 +9,18 @@
       ul
         | {% show_menu 0 1 1 100 "partials/main_menu.html" %}
 
+    .mobile-menu
+      ul
+        li
+          a
+            span(class="oi" data-glyph="menu")
+
     .lang
       | {% language_chooser 'partials/language_chooser.html' %}
 
+  .border-line
 
+.container
+  .breadcrumb
+    ul
+      | {% show_breadcrumb %}

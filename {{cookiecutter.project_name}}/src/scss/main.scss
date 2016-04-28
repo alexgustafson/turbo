@@ -1,14 +1,8 @@
 // bower:scss
-@import "../../static/frontend/vendor/susy/sass/_susy.scss";
-@import "../../static/frontend/vendor/sassy-maps/sass/_sassy-maps.scss";
-@import "../../static/frontend/vendor/breakpoint-sass/stylesheets/_breakpoint.scss";
-@import "../../static/frontend/vendor/open-iconic/font/css/open-iconic.scss";
-@import "../../static/frontend/vendor/normalize-libsass/_normalize.scss";
 // endbower
 
 @import "globals";
 @import "partials/header";
-@import "partials/typo";
 
 .container {
   @include container(1140px);

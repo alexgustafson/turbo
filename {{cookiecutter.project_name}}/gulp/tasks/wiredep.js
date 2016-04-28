@@ -37,7 +37,7 @@ gulp.task('wiredep-jade', function () {
     gulp.src(paths.jade)
         .pipe(wiredep({
             directory: paths.bowerDirectory,
-            ignorePath: '../..',
+            ignorePath: '../../..',
             overrides: overrides
         })).pipe(gulp.dest(paths.wiredep_jade_output));
 

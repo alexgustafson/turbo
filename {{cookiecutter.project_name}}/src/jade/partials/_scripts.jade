@@ -1,3 +1,4 @@
+{% raw %}
 | {% compress js %}
 // build:js {{ STATIC_URL }}frontend/scripts/main.js
 // bower:js
@@ -7,3 +8,4 @@ script(src='/static/frontend/scripts/main.js')
 | {% endcompress %}
 
 | {% render_block "js" %}
+{% endraw %}

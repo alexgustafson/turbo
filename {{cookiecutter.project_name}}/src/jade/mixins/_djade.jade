@@ -1,5 +1,5 @@
 //- DJANGO MIXINS
-//- +{% raw %}
+//- +
 
 mixin if(expression)
   | {% if !{ expression } %}
@@ -197,4 +197,4 @@ mixin script(url, filter)
     -url = "{% static '" + url + "' %}"
   script(src=url)
 
-//- +{% endraw %}
+//- +

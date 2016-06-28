@@ -1,3 +1,4 @@
+{% raw %}
 - load compress sekizai_tags
 - compress js
   // build:js {{ STATIC_URL }}frontend/scripts/main.js
@@ -7,3 +8,4 @@
   script(src='/static/frontend/scripts/main.js')
 
 | {% render_block "js" %}
+{% endraw %}

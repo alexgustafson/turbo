@@ -18,7 +18,7 @@ module.exports = {
     //scripts_output: outputRoot + 'scripts/',
 
     //wiredep stuff
-    bowerDirectory: "static/frontend/vendor/",
+    bowerDirectory: "static/{{ cookiecutter.project_name }}/vendor/",
     bowerJson: 'bower.json',
     wiredep_jade_output: appRoot + 'jade/',
     wiredep_scss_output: appRoot + 'scss/',
@@ -35,9 +35,9 @@ module.exports = {
      */
 
     jade_dest: 'templates/',
-    dest: 'static/frontend/',
-    assets_dest: 'static/frontend/assets/',
-    scripts_output: 'static/frontend/scripts/',
-    styleOutput: 'static/frontend/style/',
+    dest: 'static/{{ cookiecutter.project_name }}/',
+    assets_dest: 'static/{{ cookiecutter.project_name }}/assets/',
+    scripts_output: 'static/{{ cookiecutter.project_name }}/scripts/',
+    styleOutput: 'static/{{ cookiecutter.project_name }}/style/',
     
 };

@@ -5,7 +5,7 @@
   // bower:js
   // endbower
   // endbuild
-  script(src='/static/frontend/scripts/main.js')
+  script(src='/static/{% endraw %}{{ cookiecutter.project_name }}{% raw %}/scripts/main.js')
 
 | {% render_block "js" %}
 {% endraw %}

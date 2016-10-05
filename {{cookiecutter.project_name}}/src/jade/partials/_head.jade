@@ -10,14 +10,13 @@ title
 
 // build:css {{ STATIC_URL }}frontend/style/main.css
 // bower:css
-link(rel='stylesheet', href='/static/frontend/vendor/normalize-css/normalize.css')
 // endbower
-link(rel="stylesheet" href="{{STATIC_URL}}frontend/style/main.css")
+link(rel="stylesheet" href="{{STATIC_URL}}{% endraw %}{{ cookiecutter.project_name }}{% raw %}/style/main.css")
 // endbuild
 
 
 | {% addtoblock "css" %}
-link(rel="stylesheet" href="{{ STATIC_URL }}cms/css/cms.base.css")
+link(rel="stylesheet" href="{{ STATIC_URL }}cms/css/3.4.1/cms.base.css")
 | {% endaddtoblock "css %}
 
 - render_block "css"

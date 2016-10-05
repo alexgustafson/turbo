@@ -1,0 +1,27 @@
+{% raw %}
+- load sekizai_tags menu_tags i18n
+
+doctype html
+html(lang="{{ LANGUAGE_CODE }}")
+  head
+
+    title
+      - block pagetitle
+        | Base
+
+    - include  'partials/_head.jade'
+
+  body(ng-app="app" ng-controller="MainController")
+
+    - include 'partials/_header.jade'
+
+    | {% block content %}
+    | {% endblock  %}
+
+
+    footer
+
+    - include 'partials/_scripts.jade'
+
+{% endraw %}
+

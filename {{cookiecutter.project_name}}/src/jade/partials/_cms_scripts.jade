@@ -1,0 +1,11 @@
+{% raw %}
+- load compress sekizai_tags
+- compress js
+  // build:js {{ STATIC_URL }}frontend/scripts/main.js
+  // bower:js
+  // endbower
+  // endbuild
+  script(src='/static/{% endraw %}{{ cookiecutter.project_name }}{% raw %}/scripts/main.js')
+
+| {% render_block "js" %}
+{% endraw %}

@@ -16,6 +16,7 @@ link(rel="stylesheet" href="{{STATIC_URL}}{% endraw %}{{ cookiecutter.project_na
 
 
 | {% addtoblock "css" %}
+link(rel="stylesheet" href="{{ STATIC_URL }}cms/css/3.4.1/cms.base.css")
 | {% endaddtoblock "css %}
 
 - render_block "css"

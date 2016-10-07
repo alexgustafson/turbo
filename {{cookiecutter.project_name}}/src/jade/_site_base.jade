@@ -3,7 +3,6 @@
 doctype html
 html(lang="{% raw %}{{ LANGUAGE_CODE }}{% endraw %}")
   head
-
     title
       - block pagetitle
         | Base
@@ -13,7 +12,12 @@ html(lang="{% raw %}{{ LANGUAGE_CODE }}{% endraw %}")
   body(ng-app="app" ng-controller="MainController")
 
     - include 'partials/_header.jade'
-    - include 'partials/_breadcrumb.jade'
+
+    .container
+      .breadcrumb
+        ul
+          - block breadcrumb
+            | {% raw %}{% show_breadcrumb %}{% endraw %}
 
     .container
 

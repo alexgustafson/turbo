@@ -8,6 +8,7 @@ html(lang="{% raw %}{{ LANGUAGE_CODE }}{% endraw %}")
         | Base
 
     - include '{{ cookiecutter.project_name }}/partials/_head.jade'
+    | {% raw %}{% render_block "css" %}{% endraw %}
 
   body(ng-app="app" ng-controller="MainController")
 
@@ -36,3 +37,4 @@ html(lang="{% raw %}{{ LANGUAGE_CODE }}{% endraw %}")
 
   - include 'partials/_footer.jade'
   - include 'partials/_scripts.jade'
+  | {% raw %}{% render_block "js" %}{% endraw %}

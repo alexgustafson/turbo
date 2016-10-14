@@ -1,4 +1,13 @@
 .header {
+
+  &.dark {
+    background-color: #3e3e3e;
+  }
+
+  &.black {
+    background-color: #090909;
+  }
+
   background-color: $header-background;
   color: white;
   vertical-align: bottom;
@@ -87,6 +96,8 @@
   .lang {
     display: inline-block;
     float: right;
+    padding-top: 10px;
+    font-size: small;
 
     ul, li {
       display: inline;
@@ -138,6 +149,16 @@
     &:hover {
       color: $menu-font-color-hover;
     }
+
+    &:after {
+      padding: 3px;
+      content: '/';
+
+    }
+    &:last-child:after {
+      content: '';
+    }
+
   }
 }
 

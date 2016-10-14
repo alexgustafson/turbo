@@ -4,8 +4,6 @@
 meta(charset="utf-8")
 meta(http-equiv="x-ua-compatible" content="ie=edge")
 meta(name="viewport" content="width=device-width,initial-scale=1")
-title
-  | Title
 
 
 // build:css {{ STATIC_URL }}frontend/style/main.css
@@ -18,7 +16,7 @@ link(rel="stylesheet" href="{{STATIC_URL}}{% endraw %}{{ cookiecutter.project_na
 | {% addtoblock "css" %}
 | {% endaddtoblock "css %}
 
-- render_block "css"
+| {% render_block "css" %}
 
 
 

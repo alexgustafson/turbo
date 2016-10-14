@@ -1,15 +1,21 @@
 {% raw %}
 {% load menu_tags staticfiles %}
-.header.clearfix
+
+.header.dark.clearfix
   .container
 
     .logo
       a(href="/")
         img(src="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/assets/images/logo.png' %}")
 
+.header.black.dark.clearfix
+  .container
     .nav
       ul
         | {% show_menu 0 1 1 100 "partials/main_menu.html" %}
+        li
+          a(href='/tasks/') Tasks
+
 
     .mobile-menu
       ul
@@ -17,13 +23,10 @@
           a
             span(class="oi" data-glyph="menu")
 
+
     .lang
       | {% language_chooser 'partials/language_chooser.html' %}
 
   .border-line
 
-.container
-  .breadcrumb
-    ul
-      | {% show_breadcrumb %}
 {% endraw %}

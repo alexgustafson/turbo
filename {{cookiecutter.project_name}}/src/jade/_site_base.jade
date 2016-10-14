@@ -7,23 +7,32 @@ html(lang="{% raw %}{{ LANGUAGE_CODE }}{% endraw %}")
       - block pagetitle
         | Base
 
-    - include  'partials/_head.jade'
+    - include '{{ cookiecutter.project_name }}/partials/_head.jade'
 
   body(ng-app="app" ng-controller="MainController")
 
     - include 'partials/_header.jade'
 
     .container
-      .breadcrumb
-        ul
-          - block breadcrumb
-            | {% raw %}{% show_breadcrumb %}{% endraw %}
+      ul.breadcrumbs
+        - block breadcrumb
+        li.active
+          a(href='/{{ cookiecutter.project_name }}/') {{ cookiecutter.project_name }}
 
     .container
+      .subnavigation
+        -block subnavi
 
-      - block content
-        | base
+        h5 {% trans 'Categories' %}
+        ul.side-nav
+          li
+            a(href="#") Module One
+
+    .main
+      -block body
+        - block content
+          h5 {% raw %}{% trans '{% endraw %}{{ cookiecutter.project_name }}{% raw %}' %}{% endraw %}
 
 
-    - include 'partials/_footer.jade'
-    - include 'partials/_scripts.jade'
+  - include 'partials/_footer.jade'
+  - include 'partials/_scripts.jade'

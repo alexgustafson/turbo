@@ -24,7 +24,7 @@ html(lang="{% raw %}{{ LANGUAGE_CODE }}{% endraw %}")
       .subnavigation
         -block subnavi
 
-        h5 {% trans 'Categories' %}
+        h5 {% raw %}{% trans 'Categories' %}{% endraw %}
         ul.side-nav
           li
             a(href="#") Module One

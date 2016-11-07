@@ -32,26 +32,24 @@ var overrides = {
     }
 }
 
-
 gulp.task('wiredep-jade', function () {
-    gulp.src(paths.jade)
+    gulp.src(paths.jade_files)
         .pipe(wiredep({
             directory: paths.bowerDirectory,
-            ignorePath: '../../..',
+            ignorePath: '../..',
             overrides: overrides
-        })).pipe(gulp.dest(paths.wiredep_jade_output));
+        })).pipe(gulp.dest(paths.wiredep_jade));
 
 });
 
 
 gulp.task('wiredep-scss', function () {
-    gulp.src(paths.scss)
+    gulp.src(paths.scss_files)
         .pipe(wiredep({
             directory: paths.bowerDirectory,
             overrides: overrides
-        })).pipe(gulp.dest(paths.wiredep_scss_output));
+        })).pipe(gulp.dest(paths.wiredep_scss));
 
 });
 
 gulp.task('wiredep', ['wiredep-jade','wiredep-scss']);
-

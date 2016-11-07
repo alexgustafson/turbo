@@ -1,4 +1,6 @@
 - load sekizai_tags menu_tags i18n
+- load compress
+- load staticfiles
 
 doctype html
 html(lang="{% raw %}{{ LANGUAGE_CODE }}{% endraw %}")
@@ -7,12 +9,18 @@ html(lang="{% raw %}{{ LANGUAGE_CODE }}{% endraw %}")
       - block pagetitle
         | Base
 
-    - include '{{ cookiecutter.project_name }}/partials/_head.jade'
+    - compress css
+      // build:css {{ STATIC_URL }}frontend/style/main.css
+      // bower:css
+      // endbower
+      | <link rel="stylesheet" type="text/x-scss" href="{% raw %}{% static '{% endraw %}{{ cookiecutter.project_name }}/style/main.scss' {% raw %}%}{% endraw %}">
+      // endbuild
+
     | {% raw %}{% render_block "css" %}{% endraw %}
 
   body(ng-app="app" ng-controller="MainController")
 
-    - include 'partials/_header.jade'
+    - include '{{ cookiecutter.project_name }}/partials/header.jade'
 
     .container
       ul.breadcrumbs
@@ -23,6 +31,7 @@ html(lang="{% raw %}{{ LANGUAGE_CODE }}{% endraw %}")
     .container
       .subnavigation
         -block subnavi
+          ul
 
         h5 {% raw %}{% trans 'Categories' %}{% endraw %}
         ul.side-nav
@@ -35,6 +44,6 @@ html(lang="{% raw %}{{ LANGUAGE_CODE }}{% endraw %}")
           h5 {% raw %}{% trans '{% endraw %}{{ cookiecutter.project_name }}{% raw %}' %}{% endraw %}
 
 
-  - include 'partials/_footer.jade'
-  - include 'partials/_scripts.jade'
+  - include '{{ cookiecutter.project_name }}/partials/footer.jade'
+  - include '{{ cookiecutter.project_name }}/partials/scripts.jade'
   | {% raw %}{% render_block "js" %}{% endraw %}

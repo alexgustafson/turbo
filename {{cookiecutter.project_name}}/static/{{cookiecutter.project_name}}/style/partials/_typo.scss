@@ -1,6 +1,6 @@
 //OPEN ICONIC
 
-$icon-font-path: '/static/frontend/vendor/open-iconic/font/fonts/' !default;
+$icon-font-path: '/static/{{cookiecutter.project_name}}/vendor/open-iconic/font/fonts/' !default;
 
 @font-face {
   font-family: 'Icons';

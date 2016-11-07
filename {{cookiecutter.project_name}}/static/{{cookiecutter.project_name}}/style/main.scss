@@ -1,0 +1,20 @@
+// bower:scss
+// endbower
+
+@import "globals";
+@import "partials/typo";
+@import "partials/header";
+
+.container {
+  @include container(1140px);
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+body {
+  background-color: $body-background;
+}
+
+.content {
+  font-family: Helvetica, Sans-Serif;
+}

@@ -10,6 +10,7 @@ html(lang="{{ LANGUAGE_CODE }}")
         - page_attribute "page_title"
 
     - include  'partials/_head.jade'
+    | {% render_block "css" %}
 
   body(ng-app="app" ng-controller="MainController")
     | {% cms_toolbar %}
@@ -19,10 +20,9 @@ html(lang="{{ LANGUAGE_CODE }}")
     | {% block content %}
     | {% endblock  %}
 
-
-    footer
-
+    - include 'partials/_footer.jade'
     - include 'partials/_scripts.jade'
+    | {% render_block "js" %}
 
 {% endraw %}
 

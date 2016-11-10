@@ -1,39 +1,47 @@
+{% raw %}
+
 - load sekizai_tags menu_tags i18n
 - load compress
 - load staticfiles
 
 doctype html
-html(lang="{% raw %}{{ LANGUAGE_CODE }}{% endraw %}")
+html(lang="{{ LANGUAGE_CODE }}{% endraw %}")
   head
     title
-      - block pagetitle
+
+      meta(charset="utf-8")
+      meta(http-equiv="x-ua-compatible" content="ie=edge")
+      meta(name="viewport" content="width=device-width,initial-scale=1")
+
+
+      - block page_title
         | Base
 
     - compress css
       // build:css {{ STATIC_URL }}frontend/style/main.css
       // bower:css
       // endbower
-      | <link rel="stylesheet" type="text/x-scss" href="{% raw %}{% static '{% endraw %}{{ cookiecutter.project_name }}/style/main.scss' {% raw %}%}{% endraw %}">
+      | <link rel="stylesheet" type="text/x-scss" href="{% static '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/style/main.scss' %}">
       // endbuild
 
-    | {% raw %}{% render_block "css" %}{% endraw %}
+    | {% render_block "css" postprocessor "compressor.contrib.sekizai.compress" %}
 
   body(ng-app="app" ng-controller="MainController")
 
-    - include '{{ cookiecutter.project_name }}/partials/header.jade'
+    - include '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/partials/header.jade'
 
     .container
       ul.breadcrumbs
         - block breadcrumb
         li.active
-          a(href='/{{ cookiecutter.project_name }}/') {{ cookiecutter.project_name }}
+          a(href='/{% endraw %}{{ cookiecutter.project_name }}/') {{ cookiecutter.project_name }}{% raw %}
 
     .container
       .subnavigation
         -block subnavi
           ul
 
-        h5 {% raw %}{% trans 'Categories' %}{% endraw %}
+        h5 {% trans 'Categories' %}
         ul.side-nav
           li
             a(href="#") Module One
@@ -41,9 +49,17 @@ html(lang="{% raw %}{{ LANGUAGE_CODE }}{% endraw %}")
     .main
       -block body
         - block content
-          h5 {% raw %}{% trans '{% endraw %}{{ cookiecutter.project_name }}{% raw %}' %}{% endraw %}
+          h5 {% trans '{% endraw %}{{ cookiecutter.project_name }}{% raw %}' %}
 
 
-  - include '{{ cookiecutter.project_name }}/partials/footer.jade'
-  - include '{{ cookiecutter.project_name }}/partials/scripts.jade'
-  | {% raw %}{% render_block "js" %}{% endraw %}
+  - include '{% endraw %}{{ cookiecutter.project_name }}{% raw %}/partials/footer.jade'
+  - compress js
+    // build:js {{ STATIC_URL }}frontend/scripts/main.js
+    // bower:js
+    // endbower
+    // endbuild
+    script(src='/static/{% endraw %}{{ cookiecutter.project_name }}{% raw %}/scripts/main.js')
+
+  | {% render_block "js" postprocessor "compressor.contrib.sekizai.compress" %}
+
+{% endraw %}

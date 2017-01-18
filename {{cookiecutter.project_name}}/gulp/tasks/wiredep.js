@@ -19,7 +19,7 @@ var overrides = {
       ]
     },
     "foundation-datepicker": {
-      "main": ["css/foundation-datepicker.scss", "js/foundation-datepicker.min.js"]
+      "main": ["scss/foundation-datepicker.scss", "js/foundation-datepicker.min.js"]
     },
     "motion-ui": {
       "main": ["src/motion-ui.scss", "dist/motion-ui.min.js"]
